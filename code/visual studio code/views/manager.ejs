@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>signup</title>
+</head>
+<!-- 0x04f2F68D731df018617007cF9859392DdaDbE1e6 -->
+
+<!-- <script>
+$("#myform").bind('ajax:complete', function(datas) {
+     추가본-->
+    
+
+});
+
+</script>
+
+<body style="background-color: #F7AA97">
+    <% if( user.user_id=='qwer1234' ) { %>
+        <div style="top: 20%; left: 20%; position: absolute; background-color: #FFFFF3; width: 50%; height: 50%; padding: 30px">
+                <h1>관리자페이지</h1>
+                <form action="/signup" method="post"></form>
+                <!-- <form id = "myform" action="/history" method="post"> -->
+                    학번 : <input type="text" name="user_num"><br>　<br> <input
+                        type="submit" value="회원정보출력" style="border-color: #FFFFF3"> <br>　<br> 이름 : <%
+                    user.user_name %><br /> 주소 : <% user.user_add %><br /> 생년월일 : <%
+                    user.user_bir %><br /> 보유자격증 이름 : <% user.user_grade %><br /> 누적봉사시간
+                    :<% user.user_grade %><br>　<br> <input  style="border-color: #FFFFF3" type="submit" value='메인으로'>
+                </form>
+            </div>
+        <% } else { %>
+        <div
+                style="top: 30%; left: 30%; position: absolute; background-color: #F7AA97; width: 30%; height: 30%; padding: 30px">
+            <h1>관리자가 아닙니다.</h1>
+              <form action="/index" method='get'>
+              <input type="submit" value='메인으로' style="background-color: #FFFFF3; border-color: #F7AA97;">
+              </form>
+            </div>
+        <%} %>
+</body>
+</html> 

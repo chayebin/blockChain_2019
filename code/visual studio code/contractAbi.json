@@ -1,0 +1,79 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_cername",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_cerId",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "_studentAddress",
+				"type": "address"
+			}
+		],
+		"name": "addCerti",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "certificateTable",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "CerName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "CerId",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "certiOfStudent",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

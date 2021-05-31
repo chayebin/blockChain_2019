@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+
+    <title>Home</title>
+</head>
+<body>
+    <center><h1>"확인하세요 당신의 지나온 발자취를"</h1></center>
+    <center><h1>향림코인</h1></center>
+    <% if( !user ) { %>
+    <h2>로그인을 해주세요.</h2>
+    
+    <a href="/login">로그인</a>
+    <a href="/signup">회원가입</a>
+    <% } else { %>
+    <p>안녕하세요. <%= user.user_id %>님</p>
+    <p>이더리움 주소는 <%= user.user_address %> 입니다.</p>
+    <P>잔여 향림 포인트는 <%= user_eth_balance %> 입니다.</P>
+    <a href="/logout">로그아웃</a>
+    <!--
+    <hr>
+    <h4>이더 전송하기</h4>
+
+    
+    <form action="/sendether" method="post">
+        받는 주소 : <input type="text" name="toAddress"><br/>
+        보내는 수량 : <input type="number" name="amount"><br/>
+        <input type="submit" value = "전송">
+    </form>
+    -->
+
+    <hr>
+    <h4>문서 올리기</h4>
+    <div>
+        <div class="form-group">
+            <label class="custom-file text-xs-left">
+                <input type="file" id="file" class="custom-file-input">
+                <span class="custom-file-control"></span>
+            </label>
+        </div>
+      
+        <button onclick="upload()" class="btn btn-primary">Submit</button>
+    </div>
+    <hr>
+    <form action="/certi" method='get'>
+        <input type="submit" value='자격증등록'>
+    </form>
+
+    <hr>
+
+    <form action="/volun" method='get'>
+        <input type="submit" value='봉사등록'>
+    </form>
+    <% } %>
+
+
+
+    <script>
+    
+    function upload()
+    {
+	    var file = document.getElementById("file").files[0];
+
+	    if(file) {        
+	    	var reader = new FileReader();
+	    	reader.onload = function (event) {
+            var hash = sha1(event.target.result);
+            reqBody = { fileHash: hash }
+	    	  	$.post("/uploadfile" , reqBody, function(data){
+	    	  		console.log(data);
+	    	    });
+	    	};
+	    	reader.readAsArrayBuffer(file);
+	    } else {
+	    alert("Please select a file");
+	    }
+	  }  
+    </script>
+
+
+        
+
+</body>
+</html>

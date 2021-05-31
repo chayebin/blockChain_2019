@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+
+    <title>Home</title>
+</head>
+<body style="background-color: #566270">
+    <% if( !user ) { %>
+        <div style="top:35%; left:35%; position: absolute;">
+            <center>
+                <h1 style="color: #FFFFF3;">"확인하세요 당신의 지나온 발자취를"</h1>
+            </center>
+            <center>
+                <h1 style="color: #FFFFF3">향림코인</h1>
+            </center>
+            <center>
+                <a href="/login" style="color:white">로그인</a> <a href="/signup" style="color:white">회원가입</a>
+            </center>
+        </div>
+        <% } else { %>
+     <div
+            style="top: 10%; left: 10%; position: absolute; background-color: #FFFFF3; width: 80%; height: 80%; padding: 30px">
+           <center><img style="width:120px; height:120px;" src="http://mblogthumb2.phinf.naver.net/MjAxODA0MTJfMjU1/MDAxNTIzNTIxOTA4Njg3.R38fV89ENqCV_2mKecqEFjdoWfMyj-Sq-7RuiJmQvxQg.KzffIDFm4YXQ_zyTBKLfgXTTU4cOTAQeVKZSADwcQQ0g.PNG.xowns9109/%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90%282%29.png?type=w800"></center>
+            <center>
+                <h1 style="color: #566270;">            
+                    "확인하세요 당신의 지나온 발자취를"</h1>
+            </center>
+            <center>
+                <h1 style="color: #566270">향림코인</h1>
+            </center>
+            <hr><br>　　　　
+            <div style="float: left; position: relative; left:200px;"><form action="/manager" method='get'>
+                <input type="submit" value='학생정보조회'
+                    style="border-color: #FFFFF3; color: #FFFFF3; background-color: #A593E0; width:300px; height:60px; font-size: 25px;">
+            </form></div>
+            <div style="float: left; position: relative; left:320px;"><form action="/certi" method='get'>
+                <input type="submit" value='자격증등록'
+                    style="border-color: #FFFFF3; color: #FFFFF3; background-color: #A593E0; width:300px; height:60px; font-size: 25px;">
+            </form></div>　　　　
+            <div style="float: left; position: relative; left:440px;"><form action="/volun" method='get'>
+                <input type="submit" value='봉사등록'
+                    style="border-color: #FFFFF3; color: #FFFFF3; background-color: #A593E0; width:300px; height:60px; font-size: 25px;">
+            </form></div><br>　<br>　<br>　<br> 
+            <hr>
+            <p>안녕하세요. <%= user.user_id %>님</p>
+            <a href="/logout">로그아웃</a>
+            <hr>
+            <div style="float: left; position: relative; left:250px;">
+                <a href="https://www.scnu.ac.kr/SCNU/main.do?sso=ok"><img style="width:200px; height:200px;" src="https://files.slack.com/files-pri/TPLFWCBJL-FQMJP7ATZ/home.png"></a>　　　　
+                <a href="https://stis.scnu.ac.kr/index_s.jsp"><img style="width:200px; height:200px;" src="https://files.slack.com/files-pri/TPLFWCBJL-FQMV5HEGN/computer.png"></a>　　　　
+                <a href="https://www.scnu.ac.kr/SCNU/na/ntt/selectNttList.do?mi=1131&bbsId=1040"><img style="width:200px; height:200px;" src="https://files.slack.com/files-pri/TPLFWCBJL-FQKP1C6UQ/library.png"></a>　　　　
+                <a href="https://www.scnu.ac.kr/dorm/main.do?sso=ok"><img style="width:200px; height:200px;" src="https://files.slack.com/files-pri/TPLFWCBJL-FQ89AR15Z/dormitory.png"></a>　　　　
+            </div><br><br><br><br><br><br><br><br><br><br><br>
+            <div>　　　　　　　　　　　　　　　　 　　　순천대학교　　　　　　　　　　　　　향림통　　　　　　　　　　　　　　도서관　　　　　　　　　　　　　　기숙사</div>
+     <% } %>
+</body>
+</html>

@@ -1,0 +1,70 @@
+[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "volunOfStudent",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_volno",
+				"type": "string"
+			},
+			{
+				"name": "_volhour",
+				"type": "string"
+			},
+			{
+				"name": "_studentAddress",
+				"type": "address"
+			}
+		],
+		"name": "addVolun",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "volunteerTable",
+		"outputs": [
+			{
+				"name": "VolNo",
+				"type": "string"
+			},
+			{
+				"name": "VolHour",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
