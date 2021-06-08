@@ -51,3 +51,15 @@
 ​
 ​ 
 # 4. 기능시연
+* 시작
+![image](https://user-images.githubusercontent.com/82797757/121125309-52b66480-c861-11eb-9e55-e5bf3c8fb82e.png)
+* 회원가입
+![image](https://user-images.githubusercontent.com/82797757/121125392-75e11400-c861-11eb-8825-4f9163e315f2.png)
+* 로그인
+![image](https://user-images.githubusercontent.com/82797757/121125404-78dc0480-c861-11eb-934b-57fcc16b80a0.png)
+* 메인
+![image](https://user-images.githubusercontent.com/82797757/121125413-7bd6f500-c861-11eb-9d6d-91656a6fdecc.png)
+* 관리자 페이지
+![image](https://user-images.githubusercontent.com/82797757/121125431-82fe0300-c861-11eb-90de-3e7650c2e0fe.png)
+* 권한 제한(학생ver)
+![image](https://user-images.githubusercontent.com/82797757/121125449-8abda780-c861-11eb-8791-c2eb78c2e9dc.png)
